@@ -9,6 +9,7 @@ const Profile = ({ refreshUser, userObj }) => {
   const onLogOutClick = () => {
     authService.signOut();
     navigate("/", { replace: true });
+    refreshUser();
   };
 
   const onChange = (event) => {
